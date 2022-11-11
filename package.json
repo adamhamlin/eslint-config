@@ -31,6 +31,9 @@
     ],
     "author": "Adam C. Hamlin <achamlin@gmail.com>",
     "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
     "bugs": {
         "url": "https://github.com/adamhamlin/eslint-config/issues"
     },
