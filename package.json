@@ -1,0 +1,60 @@
+{
+    "name": "@adamhamlin/eslint-config",
+    "version": "1.0.0",
+    "description": "Easy ESLint & Prettier config for TypeScript projects",
+    "main": "index.js",
+    "scripts": {
+        "_lint": "eslint --fix",
+        "_lint:check": "eslint",
+        "_format": " prettier --write --ignore-unknown",
+        "_format:check": "prettier --check --ignore-unknown",
+        "fix": "npm run _lint . && npm run _format .",
+        "check": "npm run _lint:check . && npm run _format:check .",
+        "prepare": "husky install",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "lint-staged": {
+        "*.js": "npm run _lint -- --cache",
+        "*": "npm run _format"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/adamhamlin/eslint-config.git"
+    },
+    "keywords": [
+        "lint",
+        "config",
+        "eslint",
+        "eslintconfig",
+        "prettier",
+        "format"
+    ],
+    "author": "Adam C. Hamlin <achamlin@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/adamhamlin/eslint-config/issues"
+    },
+    "homepage": "https://github.com/adamhamlin/eslint-config#readme",
+    "peerDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.30.6",
+        "@typescript-eslint/parser": "^5.30.6",
+        "eslint": "^8.5.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-import-resolver-typescript": "^3.5.2",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.7.1"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.30.6",
+        "@typescript-eslint/parser": "^5.30.6",
+        "eslint": "^8.5.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-import-resolver-typescript": "^3.5.2",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "husky": "^8.0.2",
+        "lint-staged": "^13.0.3",
+        "prettier": "^2.7.1"
+    }
+}
