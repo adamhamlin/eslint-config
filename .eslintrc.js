@@ -22,7 +22,7 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': 'off', // disable in favor of @typescript-eslint/explicit-function-return-type
         '@typescript-eslint/no-explicit-any': 'error', // no explicit use of type `any`
         '@typescript-eslint/no-unused-vars': [
-            // allow un unused vars if they start with underscore
+            // allow unused vars if they start with underscore
             'error',
             {
                 argsIgnorePattern: '^_',
