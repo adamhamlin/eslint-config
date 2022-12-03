@@ -8,7 +8,7 @@ Custom TypeScript project settings for ESLint and Prettier! A solid baseline rul
 npm install --save-dev @adamhamlin/eslint-config
 ```
 
-> **NOTE:** This package uses peer dependencies, so there's no need to explicitly install `eslint`, `prettier`, `@typescript-eslint/eslint-plugin`, etc. (_unless you're using NPM version 6.x or earlier_).
+> **NOTE:** This package uses [peer dependencies](./package.json), so there's no need to explicitly install `eslint`, `prettier`, `@typescript-eslint/eslint-plugin`, etc. (_unless you're using NPM version 6.x or earlier_).
 
 ## Usage
 
@@ -48,12 +48,27 @@ Add the following as desired to your `package.json` file:
     "_format": " prettier --write --ignore-unknown",
     "_format:check": "prettier --check --ignore-unknown",
     "fix": "npm run _lint . && npm run _format .",
-    "check": "npm run _lint:check . && npm run _format:check .",
+    "check": "npm run _lint:check . && npm run _format:check ."
 },
 "lint-staged": {
     "*.ts": "npm run _lint -- --cache",
     "*": "npm run _format"
 },
+```
+
+## Jest Linting
+
+This package also bundles [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest), but it does not configure it. If you're using `jest`, you probably want to include something like this in your `.eslintrc.js`:
+
+```javascript
+overrides: [{
+    files: ['**/__tests__/**'],
+    plugins: ['jest'],
+    extends: ['plugin:jest/recommended'],
+    rules: {
+        // more overrides...
+    }
+}],
 ```
 
 ## Notes/Miscellaneous

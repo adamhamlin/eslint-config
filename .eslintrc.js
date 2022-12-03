@@ -21,10 +21,12 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }], // require explicit function return types
         '@typescript-eslint/explicit-module-boundary-types': 'off', // disable in favor of @typescript-eslint/explicit-function-return-type
         '@typescript-eslint/no-explicit-any': 'error', // no explicit use of type `any`
+        '@typescript-eslint/no-redeclare': ['error', { ignoreDeclarationMerge: false }], // disallow duplicate declarations, including declaration merging
         '@typescript-eslint/no-unused-vars': [
             // allow unused vars if they start with underscore
             'error',
             {
+                args: 'all',
                 argsIgnorePattern: '^_',
                 varsIgnorePattern: '^_',
                 caughtErrorsIgnorePattern: '^_',
@@ -55,6 +57,7 @@ module.exports = {
                 },
             },
         ],
+        'no-redeclare': 'off', // disabling in favor of @typescript-eslint/no-redeclare
         'no-return-await': 'off', // disabling in favor of @typescript-eslint/return-await
         'prettier/prettier': 'off', // consumers may override with: ['error', require('./.prettierrc')]
         quotes: ['error', 'single', { allowTemplateLiterals: true }], // require quoted strings to use single quotes, excluding template literals
