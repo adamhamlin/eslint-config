@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/adamhamlin/eslint-config/compare/v1.2.0...v1.3.0) (2022-12-17)
+
+
+### Features
+
+* Check circular deps, ignore TS build dirs ([#5](https://github.com/adamhamlin/eslint-config/issues/5)) ([4797e8e](https://github.com/adamhamlin/eslint-config/commit/4797e8eb0293ec5d85214239cb53c2d32bf5463f))
+
 ## [1.2.0](https://github.com/adamhamlin/eslint-config/compare/v1.1.0...v1.2.0) (2022-12-03)
 
 ### Features
