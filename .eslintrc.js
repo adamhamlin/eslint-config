@@ -14,7 +14,7 @@ module.exports = {
         sourceType: 'module',
         project: './tsconfig.json',
     },
-    ignorePatterns: ['**/*.js'],
+    ignorePatterns: ['**/*.js', 'dist/*', 'out/*'], // ignore some typical TS output directory names
     rules: {
         ///////////////////////////////////////////////////////////////////////
         // 1. Important rules or rules that come up often
@@ -37,6 +37,7 @@ module.exports = {
         '@typescript-eslint/return-await': ['error', 'in-try-catch'], // disallow "return await", except require when needed in try/catch
         curly: ['error', 'all'], // require curly braces around conditionals
         eqeqeq: ['error', 'always'], // disallow '==' and '!='
+        'import/no-cycle': ['error', { ignoreExternal: true }], // disallow circular imports
         'import/no-named-as-default-member': 'off', // disable because too annoying. See https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-named-as-default-member.md
         'import/order': [
             // enforce ordering and formatting of imports
