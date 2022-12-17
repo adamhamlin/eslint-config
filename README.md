@@ -73,7 +73,7 @@ overrides: [{
 
 ## Notes/Miscellaneous
 
--   By default, `*.js` files will be ignored by eslint. You can override `ignorePatterns` as needed.
+-   By default, eslint will ignore `*.js` files and typical TS output directories (e.g., `dist`, `out`). You can override `ignorePatterns` as needed.
 -   This package already bundles a `parser` and sets `parserOptions`.
 -   By default, eslint and prettier are kept fully separated. If you would like eslint to also use rules from your prettier config, update the following in `.eslintrc.js`:
     ```javascript
