@@ -8,7 +8,7 @@ module.exports = {
         'plugin:import/typescript',
         'prettier',
     ],
-    plugins: ['@typescript-eslint', 'import', 'prettier'],
+    plugins: ['@typescript-eslint', 'import', 'prettier', 'adamhamlin'],
     parserOptions: {
         ecmaVersion: 13,
         sourceType: 'module',
@@ -35,6 +35,8 @@ module.exports = {
         '@typescript-eslint/no-inferrable-types': 'off', // disable to allow explicit types that could be inferred
         '@typescript-eslint/no-non-null-assertion': 'error', // disallow the non-nullable operator '!.'
         '@typescript-eslint/return-await': ['error', 'in-try-catch'], // disallow "return await", except require when needed in try/catch
+        'adamhamlin/no-empty-block-comment': 'error', // disallow empty block comments
+        'adamhamlin/opt-in-sort': 'error', // enforce sorting where annotated
         curly: ['error', 'all'], // require curly braces around conditionals
         eqeqeq: ['error', 'always'], // disallow '==' and '!='
         'import/no-cycle': ['error', { ignoreExternal: true }], // disallow circular imports
