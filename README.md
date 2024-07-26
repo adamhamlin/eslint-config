@@ -1,5 +1,7 @@
 # Easy ESLint & Prettier Config
 
+[![npm version](https://badge.fury.io/js/@adamhamlin%2Feslint-config.svg)](https://badge.fury.io/js/@adamhamlin%2Feslint-config)
+
 Custom TypeScript project settings for ESLint and Prettier! A solid baseline ruleset that you can override as desired. Check out the specific settings in [.eslintrc.js](./.eslintrc.js) and [.prettierrc.js](./.prettierrc.js).
 
 ## Install

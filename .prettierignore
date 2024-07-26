@@ -1,0 +1,5 @@
+# Ignore artifacts:
+dist
+
+# Ignore changelog since auto-updated by standard-version
+CHANGELOG.md
