@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/adamhamlin/eslint-config/compare/v1.4.0...v1.4.1) (2024-08-09)
+
+
+### Bug Fixes
+
+* add missing peer dep for eslint-plugin-adamhamlin ([#8](https://github.com/adamhamlin/eslint-config/issues/8)) ([d18663b](https://github.com/adamhamlin/eslint-config/commit/d18663bf0fd7c6caab1feb573d6cd11fc02aa905))
+
 ## [1.4.0](https://github.com/adamhamlin/eslint-config/compare/v1.3.0...v1.4.0) (2024-07-26)
 
 ### Features
